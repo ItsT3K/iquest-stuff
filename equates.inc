@@ -32,40 +32,38 @@
 	store_framebuf		EQU	0fce4h	; The stored frame buffer is shifted right by 3 bits
 	
 ;	midi_calc_pitch		EQU	0f007h	; Also uses f008
-;	midi_pitch_short		EQU	0f4aeh
+;	midi_pitch_short	EQU	0f4aeh
 
 ; ======= Flash =======
-	UserName			EQU	0c076h
-	hCurDataset			EQU	0c086h
-	hCurView			EQU	0c087h
-	hPrevView			EQU	0c088h
-	flash_pri_success	EQU	0c089h	; Bit 3 - 1 = Success, 0 =
-	Fail
-	flash_sec_success	EQU	0c089h	; Bit 4 - 1 = Success, 0 =
-	Fail
+	UserName		EQU	0c076h
+	hCurDataset		EQU	0c086h
+	hCurView		EQU	0c087h
+	hPrevView		EQU	0c088h
+	flash_pri_success	EQU	0c089h	; Bit 3 - 1 = Success, 0 = Fail
+	flash_sec_success	EQU	0c089h	; Bit 4 - 1 = Success, 0 = Fail
 ; ====== END Flash ======
-	Struct2				EQU	0c0a2h
+	Struct2			EQU	0c0a2h
 	
-	CartStatus			EQU	0f058h	; Bit 0 - 2 is Cart Status
-;	Initialized			EQU	0f058h	; Bit 3 = Initialized
-;	BatteryLoss			EQU	0f058h	; Bit 5 = Battery Loss
+	CartStatus		EQU	0f058h	; Bit 0 - 2 is Cart Status
+;	Initialized		EQU	0f058h	; Bit 3 = Initialized
+;	BatteryLoss		EQU	0f058h	; Bit 5 = Battery Loss
 ; These are commented out as it's hard to try to write the individual bits as their own EQUs
 	Short			EQU	0f05bh
 	
-	unknown01			EQU	0f4e2h	; Also uses F4E3
+	unknown01		EQU	0f4e2h	; Also uses F4E3
 	
-	powerdown1			EQU	0fc00h	; Bit 3 - 0: Auto Power
+	powerdown1		EQU	0fc00h	; Bit 3 - 0: Auto Power
 	Down, 1: Off Switch
-	unknown02			EQU	0fc01h	; goes to FC04
+	unknown02		EQU	0fc01h	; goes to FC04
 	
 ; ====== Serial ======
-	RxBuf_wpos			EQU	0ff00h
-	RxBuf_rpos			EQU	0ff01h
-	RxBuf				EQU	0ff02h	; byte[64]
+	RxBuf_wpos		EQU	0ff00h
+	RxBuf_rpos		EQU	0ff01h
+	RxBuf			EQU	0ff02h	; byte[64]
 ; ====== END Serial ======
 
 ; ====== Registers ======
-	r7					EQU	0f200h
-	r6					EQU	0f000h
+	r7			EQU	0f200h
+	r6			EQU	0f000h
 	
 	
